@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Number Facts</string>
+    <string name="did_you_know">Did u know ?</string>
+    <string name="show_another_fact">Show Another Fun Fact</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff51b46d"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.welcome.MainActivity" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:padding="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/did_you_know"
+        android:textSize="30sp"
+        android:textColor="#ffffffff"/>
+
+    <TextView
+        android:id="@+id/facttextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp"
+        android:textColor="#ffffffff" />
+
+    <Button
+        android:id="@+id/factbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/facttextView1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="73dp"
+        android:background="#ffffffff"
+        android:text="@string/show_another_fact"
+        android:textColor="#ff51b46d"
+        android:onClick="onChangingNumber"/>
+
+</RelativeLayout>
