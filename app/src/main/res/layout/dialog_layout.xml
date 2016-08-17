@@ -6,10 +6,28 @@
     >
 
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
 
-  <EditText
-      android:id="@+id/editText"
-      android:layout_width="fill_parent"
-      android:layout_height="fill_parent" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:id="@+id/radioButton"
+            android:layout_gravity="center_vertical" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number"
+            android:id="@+id/radioButton2"
+            android:layout_gravity="center_vertical" />
+
+
+    </RadioGroup>
+
+
 
 </LinearLayout>

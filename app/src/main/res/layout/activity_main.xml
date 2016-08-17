@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.welcome.MainActivity" >
+    tools:context="com.example.amrarafa.numberfacts.MainActivity" >
 
     <TextView
         android:id="@+id/textView2"
@@ -32,7 +32,7 @@
         android:textColor="#ffffffff" />
 
     <Button
-        android:id="@+id/factbutton"
+        android:id="@+id/another_fact_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/facttextView1"
@@ -41,6 +41,54 @@
         android:background="#ffffffff"
         android:text="@string/show_another_fact"
         android:textColor="#ff51b46d"
-        android:onClick="onChangingNumber"/>
+        android:onClick="onChangingType"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/number_fact"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="enter number"
+        android:visibility="invisible"/>
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_day"
+        android:layout_below="@+id/number_fact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"
+        />
+
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_month"
+        android:layout_below="@+id/number_fact"
+        android:layout_alignLeft="@+id/spinner_day"
+        android:layout_marginLeft="150dp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Fact!"
+        android:id="@+id/show_fact_button"
+        android:layout_below="@+id/spinner_day"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff51b46d"
+        android:background="#ffffffff"
+        android:visibility="invisible"
+        android:onClick="showFactListener"
+        android:layout_marginTop="20dp"
+        />
 
 </RelativeLayout>

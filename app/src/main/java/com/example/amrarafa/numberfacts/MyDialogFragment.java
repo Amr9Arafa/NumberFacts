@@ -6,6 +6,8 @@ import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 
@@ -19,30 +21,27 @@ public class MyDialogFragment extends DialogFragment{
 
     public interface Callback {
 
-        public void onNumberSelected(String choosenNumber);
+        public void onNumberSelected(int choosenNumber);
     }
 
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
+
+
         AlertDialog.Builder alert= new AlertDialog.Builder(getActivity());
-        final EditText editText=new EditText(getActivity());
-        alert.setTitle("Choose Number")
-                .setView(editText)
-                .setMessage("Choose Number")
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+        alert.setTitle("Choose Type")
+             .setItems(R.array.type_array, new DialogInterface.OnClickListener() {
+                 @Override
+                 public void onClick(DialogInterface dialogInterface, int i) {
+
+                     ((Callback) getActivity()).onNumberSelected(i);
 
 
-                        String choosenNumber=editText.getText().toString();
+                 }
+             })   ;
 
-                        ((Callback) getActivity()).onNumberSelected(choosenNumber);
-
-                        getDialog().dismiss();
-                    }
-                });
 
 
         return alert.create();
